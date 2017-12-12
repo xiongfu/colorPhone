@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/overlay_relative"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_overlay">
+
+    <include layout="@layout/video_background" />
+
+    <ImageView
+        android:id="@+id/overlay_caller_avatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/overlay_caller_avatar"
+        android:background="@mipmap/acb_phone_default_caller_avatar"/>
+
+    <TextView
+        android:id="@+id/overlay_caller_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/phone_caller_number"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/overlay_caller_avatar"
+        android:textSize="@dimen/text_size"
+        android:layout_marginTop="@dimen/number_margin_top"
+        android:textStyle="bold"
+        android:textColor="@color/color_write"/>
+
+    <TextView
+        android:id="@+id/overlay_caller_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/overlay_caller_number"
+        android:text="@string/phone_caller_name"
+        android:textSize="@dimen/text_size_1"
+        android:layout_marginTop="@dimen/name_margin_top"
+        android:textColor="@color/color_write"/>
+
+    <ImageView
+        android:id="@+id/overlay_refuse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/overlay_margin_bottom"
+        android:layout_marginLeft="@dimen/overlay_margin_left"
+        android:background="@mipmap/acb_phone_call_refuse" />
+
+    <ImageView
+        android:id="@+id/overlay_answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/overlay_margin_bottom"
+        android:layout_marginRight="@dimen/overlay_margin_left"
+        android:background="@mipmap/acb_phone_call_answer" />
+</RelativeLayout>

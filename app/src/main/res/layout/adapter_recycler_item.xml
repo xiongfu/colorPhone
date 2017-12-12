@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:padding="@dimen/main_themes_item_padding">
+
+    <RelativeLayout
+        android:id="@+id/item_overlay_relative"
+        android:layout_width="@dimen/main_themes_item_wight"
+        android:layout_height="@dimen/main_themes_item_height"
+        android:background="@mipmap/bg_overlay">
+
+        <!--<VideoView-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="0dp" />-->
+
+        <include
+            android:id="@+id/video_relative"
+            layout="@layout/video_background"/>
+
+        <ImageView
+            android:id="@+id/overlay_caller_avatar"
+            android:layout_width="@dimen/main_title_height"
+            android:layout_height="@dimen/main_title_height"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/main_title_height"
+            android:background="@mipmap/acb_phone_default_caller_avatar" />
+
+        <TextView
+            android:id="@+id/item_overlay_caller_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/overlay_caller_avatar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="@string/phone_caller_number"
+            android:textColor="@color/color_write"
+            android:textSize="@dimen/text_size_3"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/item_overlay_caller_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_overlay_caller_number"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/main_themes_item_padding"
+            android:text="@string/phone_caller_name"
+            android:textColor="@color/color_write"
+            android:textSize="@dimen/text_size_2" />
+
+        <ImageView
+            android:id="@+id/item_overlay_refuse"
+            android:layout_width="@dimen/main_title_height"
+            android:layout_height="@dimen/main_title_height"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/main_setting_margin_right"
+            android:layout_marginLeft="@dimen/main_setting_margin_right"
+            android:background="@mipmap/acb_phone_call_refuse" />
+
+        <ImageView
+            android:id="@+id/item_overlay_answer"
+            android:layout_width="@dimen/main_title_height"
+            android:layout_height="@dimen/main_title_height"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/main_setting_margin_right"
+            android:layout_marginRight="@dimen/main_setting_margin_right"
+            android:background="@mipmap/acb_phone_call_answer" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="@dimen/main_themes_item_wight"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_overlay_relative">
+
+        <TextView
+            android:id="@+id/item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/main_themes_item_padding"
+            android:text="Xmas Tree"
+            android:textColor="@color/color_back" />
+
+        <ImageView
+            android:id="@+id/item_collection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_name"
+            android:background="@android:drawable/star_off" />
+
+        <ImageView
+            android:id="@+id/item_use"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@android:drawable/btn_star_big_off" />
+    </RelativeLayout>
+</RelativeLayout>
